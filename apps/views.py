@@ -13,8 +13,8 @@ def base():
     return "status:up"
 
 
-@polls_bp.route('/addAnswer')
-def answers_post():
+@polls_bp.route('/answer_poll/', methods=['POST'])
+def answer_poll():
     data = request.json
     res = MongoAPI("answers").write(data)
     return Response(response=json.dumps(res),
@@ -22,8 +22,8 @@ def answers_post():
                     mimetype='application/json')
 
 
-@polls_bp.route('/addPoll')
-def polls_post():
+@polls_bp.route('/polls/', methods=['POST'])
+def create_poll():
     data = request.json
     res = MongoAPI("polls").write(data)
     return Response(response=json.dumps(res),
@@ -31,8 +31,8 @@ def polls_post():
                     mimetype='application/json')
 
 
-@polls_bp.route('/getPolls')
-def polls_get():
+@polls_bp.route('/polls/', methods=['GET'])
+def get_all_polls():
     polls = MongoAPI("polls").read()
     answers = MongoAPI("answers").read()
     for poll in polls:

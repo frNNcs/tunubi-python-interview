@@ -19,11 +19,11 @@ Para ayudarte, el equipo de desarrollo preparó algunos ejemplos de uso de la AP
 
 `curl http://localhost:5000`
 
-`curl http://localhost:5000/addPoll --request GET --header "Content-Type: application/json" --data '{"question": "¿Te gusta Python?"}'`
+`curl -x POST http://localhost:5000/polls/ --request GET --header "Content-Type: application/json" --data '{"question": "¿Te gusta Python?"}'`
 
-`curl http://localhost:5000/addAnswer --request GET --header "Content-Type: application/json" --data '{"poll_id": "5fc9129482d4589e8d7d687e", "answer": "Me encanta Python"}'`
+`curl -x POST http://localhost:5000/answer_poll/ --request GET --header "Content-Type: application/json" --data '{"poll_id": "5fc9129482d4589e8d7d687e", "answer": "Me encanta Python"}'`
 
-`curl http://localhost:5000/getPolls`
+`curl http://localhost:5000/polls/`
 
 Las propuestas que hagas pueden ser de cualquier tipo, siempre que sean coherentes entre sí.
 

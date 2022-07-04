@@ -9,7 +9,7 @@
   - [x] 4.2 Crear archivo separado para views
     - [x] 4.2.1 Separar por method
     - [x] 4.2.2 Informar errores
-    - [ ] 4.2.3 Documentar api rest.
+    - [ ] 4.2.3 Documentar api rest on root url.
   - [x] 4.3 Model pools and answers.
     - [x] 4.3.1 Validate creation (Schemas) marshmallow
     - [x] 4.3.2 Models.

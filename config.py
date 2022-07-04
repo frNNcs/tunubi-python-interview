@@ -13,7 +13,7 @@ class MongoAPI:
 
     def read(self):
         documents = self.collection.find()
-        output = [{item: str(data[item]) for item in data}
+        output = [{item: data[item] for item in data}
                   for data in documents]
         return output
 
@@ -22,6 +22,9 @@ class MongoAPI:
 
     def write(self, data):
         new_document = data
-        new_document["CreatedDate"] = datetime.datetime.today()
+        new_document["created_at"] = datetime.datetime.now()
         result = self.collection.insert_one(new_document)
         return str(result.inserted_id)
+
+    def delete_all(self):
+        self.collection.delete_many({})

@@ -26,17 +26,22 @@ def base():
 @polls_bp.route('/answer_poll/', methods=['POST'])
 def answer_poll():
     try:
-        AnswersSchema().load(request.json)
+        answer = AnswersSchema().load(request.json)
     except ValidationError as err:
         return Response(json.dumps(err.messages),
                         status=400,
                         mimetype='application/json')
 
     else:
-        answer_id = MongoAPI("answers").write(request.json)
-        return Response(response=json.dumps({'answer_id': answer_id}),
-                        status=200,
-                        mimetype='application/json')
+        if not MongoAPI("polls").find_byid(answer.poll_id):
+            return Response(json.dumps({"error": "Poll not found"}),
+                            status=404,
+                            mimetype='application/json')
+        else:
+            answer_id = MongoAPI("answers").write(request.json)
+            return Response(response=json.dumps({'answer_id': answer_id}),
+                            status=200,
+                            mimetype='application/json')
 
 
 @polls_bp.route('/polls/', methods=['POST'])

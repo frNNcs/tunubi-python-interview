@@ -28,8 +28,8 @@
   2. Se debera realiar un test estatico (flake8) para conseguir un codigo homogeneo y de facil lectura para todos los integrantes del equipo.
   [b247de](https://github.com/frNNcs/tunubi-python-interview/commit/b247de503b666058dcd1afec819916e14a45bed8)
 
-  1. (3-4)  Se debera aplicar una reestructuracion de los archivos para prepararlo para una mayor escalabilidad y poder aplicar el patron mvc. Se debera crear al menos un archivo para los modelos, formularios de validacion y vistas. Se deberan aplicar convenciones de REST-FULL APIs para agilizar la incorporacion de los mismos.
+  3. (3-4)  Se debera aplicar una reestructuracion de los archivos para prepararlo para una mayor escalabilidad y poder aplicar el patron mvc. Se debera crear al menos un archivo para los modelos, formularios de validacion y vistas. Se deberan aplicar convenciones de REST-FULL APIs para agilizar la incorporacion de los mismos.
   [e6828b](https://github.com/frNNcs/tunubi-python-interview/commit/e6828b6664c6ee240f037b522aaa3826f0f5c514) -
   [64d41d](https://github.com/frNNcs/tunubi-python-interview/commit/64d41dd9b9ad91fe25606f4607be28f26afae3ab) -
   [88d1f05](https://github.com/frNNcs/tunubi-python-interview/commit/88d1f059dcf961f0a15c4a7bc8a899156660deb3)
-  1. Se deberia agregar un sistema de login y permisos para el acceso controlado a los endpoints.
+  6. Se deberia agregar un sistema de login y permisos para el acceso controlado a los endpoints.

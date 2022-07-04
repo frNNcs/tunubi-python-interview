@@ -32,4 +32,5 @@
   [e6828b](https://github.com/frNNcs/tunubi-python-interview/commit/e6828b6664c6ee240f037b522aaa3826f0f5c514) -
   [64d41d](https://github.com/frNNcs/tunubi-python-interview/commit/64d41dd9b9ad91fe25606f4607be28f26afae3ab) -
   [88d1f05](https://github.com/frNNcs/tunubi-python-interview/commit/88d1f059dcf961f0a15c4a7bc8a899156660deb3)
+  [f3a4caa](https://github.com/frNNcs/tunubi-python-interview/commit/f3a4caa90d84cd7f0b42c918f2548bc3a0b71ad2)
   6. Se deberia agregar un sistema de login y permisos para el acceso controlado a los endpoints.
